@@ -81,7 +81,21 @@ def add(a, b):
 
 ![Lite mode](docs/demo-lite.png)
 
-## Install
+## Quick Install
+
+### Windows (PowerShell)
+```powershell
+irm https://raw.githubusercontent.com/Dang3rStrang3r/lazy-dev-skill/main/install.ps1 | iex
+```
+
+### Mac / Linux (bash)
+```bash
+curl -sSSL https://raw.githubusercontent.com/Dang3rStrang3r/lazy-dev-skill/main/install.sh | bash
+```
+
+The script auto-detects Claude Code, Cursor, and Gemini CLI, and installs to all that are present.
+
+## Manual Install
 
 ### Claude Code
 ```bash
