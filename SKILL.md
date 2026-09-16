@@ -1,11 +1,11 @@
----
+﻿---
 name: lazy-dev
 description: >
-  Enforces terse, answer-first output for AI coding agents. No preamble,
-  no flattery, no unrequested explanations. Use when working with Claude
-  Code, Cursor, or Codex on write/refactor/fix/review tasks. Don't use
-  for non-coding requests or when the user explicitly asks for detailed
-  walkthroughs.
+Enforces terse, answer-first output for AI coding agents. No preamble,
+no flattery, no unrequested explanations. Use when working with Claude
+Code, Cursor, Codex, or Gemini on write/refactor/fix/review tasks. Don't use
+for non-coding requests or when the user explicitly asks for detailed
+walkthroughs.
 license: MIT
 ---
 
@@ -34,5 +34,5 @@ If the explanation is longer than the code, delete the explanation.
 - **full:** The ladder enforced. Stdlib and native first.
 - **ultra:** YAGNI extremist. Deletion before addition.
 
-Default: full. Switch: `/lazy-dev lite|full|ultra`.
+Default: full. Switch: /lazy-dev lite|full|ultra.
 Off: "stop lazy-dev" / "normal mode".

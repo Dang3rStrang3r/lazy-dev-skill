@@ -93,6 +93,11 @@ git clone https://github.com/Dang3rStrang3r/lazy-dev-skill ~/.claude/skills/lazy
 git clone https://github.com/Dang3rStrang3r/lazy-dev-skill ~/.cursor/skills/lazy-dev
 ```
 
+### Gemini CLI
+```bash
+git clone https://github.com/Dang3rStrang3r/lazy-dev-skill ~/.gemini/skills/lazy-dev
+```
+
 ### Manual
 Copy `SKILL.md` into your agent's skills directory.
 
