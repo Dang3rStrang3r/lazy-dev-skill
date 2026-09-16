@@ -2,7 +2,7 @@
 
 > Answer first. No fluff. Code that ships.
 
-A [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) that forces AI coding agents to stop writing essays and start writing code.
+An [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) that forces AI coding agents to stop writing essays and start writing code.
 
 ## The Problem
 
@@ -40,4 +40,4 @@ You ask for a bug fix. You get:
 
 ### Claude Code
 ```bash
-git clone https://github.com/YOUR-USERNAME/lazy-dev-skill ~/.claude/skills/lazy-dev
+git clone https://github.com/Dang3rStrang3r/lazy-dev-skill ~/.claude/skills/lazy-dev
