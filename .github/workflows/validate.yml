@@ -1,0 +1,57 @@
+name: Validate SKILL.md
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Validate SKILL.md frontmatter
+        run: |
+          python - <<'EOF'
+          import sys
+          import yaml
+          
+          with open('SKILL.md', 'r', encoding='utf-8') as f:
+              content = f.read()
+          
+          if not content.startswith('---'):
+              print('ERROR: SKILL.md must start with ---')
+              sys.exit(1)
+          
+          parts = content.split('---', 2)
+          if len(parts) < 3:
+              print('ERROR: Missing closing --- for frontmatter')
+              sys.exit(1)
+          
+          frontmatter = yaml.safe_load(parts[1])
+          
+          if 'name' not in frontmatter:
+              print('ERROR: Missing name field')
+              sys.exit(1)
+          
+          if 'description' not in frontmatter:
+              print('ERROR: Missing description field')
+              sys.exit(1)
+          
+          name = frontmatter['name']
+          if not all(c.islower() or c.isdigit() or c == '-' for c in name):
+              print(f'ERROR: name "{name}" must be kebab-case')
+              sys.exit(1)
+          
+          print(f'OK: skill "{name}" validated')
+          EOF
