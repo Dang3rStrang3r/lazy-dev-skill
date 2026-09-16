@@ -1,4 +1,4 @@
-﻿# lazy-dev
+# lazy-dev
 
 > Answer first. No fluff. Code that ships.
 

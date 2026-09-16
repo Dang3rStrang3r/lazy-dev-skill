@@ -1,4 +1,4 @@
-﻿---
+---
 name: lazy-dev
 description: >
 Enforces terse, answer-first output for AI coding agents. No preamble,
